@@ -1,12 +1,11 @@
 #!/bin/bash
 n=0
 a=links_map
-
 link_base=0
+
 for i in `cat ${a} | tr ':' '\n'` ; do
    let n=$n+1
-   if [ $(($n % 2)) -eq 0 ]
-   then
+   if [ $(($n % 2)) -eq 0 ]; then
       echo ln -s $link_base ${i}
    else
       link_base=$i
