@@ -1,6 +1,6 @@
 #!/bin/bash
 n=0
-a=links_map
+a=config/links_map
 link_base=0
 
 for i in `cat ${a} | tr ':' '\n'` ; do
