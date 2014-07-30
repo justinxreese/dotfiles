@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if test ! $(xcode-select -p); then
+   xcode-select --install
+fi
+
+if test ! $(which brew); then
+   ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)" && brew doctor && brew update
+fi
+
+if test ! $(which zsh); then
+   curl -L http://install.ohmyz.sh | sh
+fi
